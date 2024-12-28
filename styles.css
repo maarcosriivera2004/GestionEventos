@@ -10,22 +10,28 @@ header {
   padding: 10px 20px;
   position: relative;
 }
+body {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente "Roboto" */
+}
 
 nav {
   display: flex;
-  justify-content: space-between; /* Alinea el contenido en el header */
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 h1 {
   font-size: 40px;
   font-weight: bold;
+  margin-right: auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  align-items: center; /* Alinea los elementos verticalmente */
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .nav-links li {
@@ -36,10 +42,73 @@ h1 {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: orange;
+  color: #ff7043; /* Cambié el color de hover para hacerlo más atractivo */
+}
+
+.user-option {
+  position: relative;
+  margin-left: 20px;
+  display: flex; /* Añadimos flexbox */
+  justify-content: center; /* Centramos el icono horizontalmente */
+  align-items: center; /* Centramos el icono verticalmente */
+}
+
+.user-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 65px;
+}
+
+.user-icon:hover {
+  background-color: #ff7043; /* Color de fondo del icono al hacer hover */
+}
+
+.user-icon i {
+  color: white;
+  font-size: 22px;
+}
+
+/* Estilo del menú desplegable */
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #333;
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  text-align: center; /* Centra el texto dentro del dropdown */
+}
+
+.user-dropdown a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  transition: background-color 0.3s ease;
+}
+
+.user-dropdown a:hover {
+  background-color: #444;
+}
+
+.user-option.show-dropdown .user-dropdown {
+  display: block;
 }
 
 .hamburguer {
@@ -56,18 +125,25 @@ h1 {
   transition: 0.3s;
 }
 
-/* Estilos para dispositivos pequeños */
+.nav-links li:nth-child(4) {
+  display: none; /* Ocultamos "Inicio4" en pantallas pequeñas */
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: #333;
+    background-color: #232323;
     width: 100%;
     flex-direction: column;
-    text-align: center; /* Centra el texto en el menú */
-    padding-top: 20px; /* Añade espacio arriba del menú */
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .nav-links.show li:nth-child(4) {
+    display: block; /* Mostramos "Inicio4" cuando el menú de hamburguesa esté activo */
   }
 
   .nav-links li {
@@ -81,5 +157,23 @@ h1 {
   .nav-links.show {
     display: flex;
     background-color: #232323;
+  }
+
+  .user-option {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .user-option a {
+    font-size: 16px;
+  }
+
+  .user-option {
+    display: none; /* Ocultar el icono de usuario */
+  }
+
+  .user-dropdown {
+    display: none;
   }
 }
