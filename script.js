@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const userIcon = document.querySelector('#user-icon');
-  const userOption = document.querySelector('#user-option');  // Selecciona el contenedor que envuelve el icono y el dropdown
+  const userOption = document.querySelector('#user-option');
   const hamburguer = document.querySelector('#hamburguer');
   const navLinks = document.querySelector('#nav-links');
 
   // Evento para mostrar/ocultar el dropdown del usuario
   userIcon.addEventListener('click', () => {
-    console.log("Clic en el icono de usuario"); // Verifica que el evento se activa
     userOption.classList.toggle('show-dropdown');  // Cambia la clase en el contenedor
   });
 
@@ -14,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   hamburguer.addEventListener('click', () => {
     navLinks.classList.toggle('show');
   });
-  
-
-  
 });
 
 const container = document.querySelector(".container"),
@@ -31,13 +27,11 @@ pwShowHide.forEach((eyeIcon) => {
     pwFields.forEach((pwField) => {
       if (pwField.type === "password") {
         pwField.type = "text";
-
         pwShowHide.forEach((icon) => {
           icon.classList.replace("uil-eye-slash", "uil-eye");
         });
       } else {
         pwField.type = "password";
-
         pwShowHide.forEach((icon) => {
           icon.classList.replace("uil-eye", "uil-eye-slash");
         });
@@ -56,3 +50,4 @@ login.addEventListener("click", (e) => {
   e.preventDefault();
   container.classList.remove("active");
 });
+
