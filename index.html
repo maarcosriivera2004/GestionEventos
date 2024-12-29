@@ -9,33 +9,34 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Asegúrate de tener esto -->
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>VivaEvents</h1>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Eventos</a></li>
-        <li><a href="#">Inicio3</a></li>
-        <li><a href="#">Iniciar Sesión</a></li>
-      </ul>
-      <!-- Icono de usuario y menú desplegable -->
-      <div class="user-option" id="user-option">
-        <div class="user-icon" id="user-icon">
-          <i class="fas fa-user"></i>
+   <header>
+      <nav>
+        <h1><i class="fas fa-calendar-alt"></i> VivaEvents</h1>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+          <li><a href="#"><i class="fas fa-calendar-check"></i> Eventos</a></li>
+          <li><a href="#"><i class="fas fa-info-circle"></i> Sobre Nosotros</a></li>
+          <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a></li>
+        </ul>
+        <!-- Icono de usuario y menú desplegable -->
+        <div class="user-option" id="user-option">
+          <div class="user-icon" id="user-icon">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="user-dropdown" id="user-dropdown">
+            <a href="login.html"><i class="fas fa-sign-in-alt"></i> Iniciar sesión</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Registrarse</a>
+          </div>
         </div>
-        <div class="user-dropdown" id="user-dropdown">
-          <a href="#">Iniciar sesión</a>
-          <a href="#">Registrarse</a>
+        <!-- Menú hamburguesa -->
+        <div class="hamburguer" id="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-      </div>
-      <!-- Menú hamburguesa -->
-      <div class="hamburguer" id="hamburguer">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
+    
 
   <main>
     <section class="hero">
